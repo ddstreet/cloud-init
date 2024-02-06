@@ -4,14 +4,15 @@
 {% set is_bsd = variant in ["dragonfly", "freebsd", "netbsd", "openbsd"] %}
 {% set is_rhel = variant in ["almalinux", "centos", "cloudlinux", "eurolinux",
                              "miraclelinux", "rhel", "rocky", "virtuozzo"] %}
-{% set gecos = ({"amazon": "EC2 Default User", "centos": "Cloud User",
-                 "debian": "Debian", "dragonfly": "DragonFly",
-                 "freebsd": "FreeBSD", "mariner": "MarinerOS",
-                 "rhel": "Cloud User", "netbsd": "NetBSD",
-                 "openbsd": "openBSD", "openmandriva": "OpenMandriva admin",
-                 "photon": "PhotonOS", "ubuntu": "Ubuntu",
-                 "unknown": "Ubuntu"}) %}
+{% set gecos = ({"amazon": "EC2 Default User", "azurelinux": "Azure Linux",
+                 "centos": "Cloud User", "debian": "Debian",
+                 "dragonfly": "DragonFly", "freebsd": "FreeBSD",
+                 "mariner": "MarinerOS", "rhel": "Cloud User",
+                 "netbsd": "NetBSD", "openbsd": "openBSD",
+                 "openmandriva": "OpenMandriva admin", "photon": "PhotonOS",
+                 "ubuntu": "Ubuntu", "unknown": "Ubuntu"}) %}
 {% set groups = ({"alpine": "adm, wheel", "arch": "wheel, users",
+                  "azurelinux": "wheel",
                   "debian": "adm, audio, cdrom, dialout, dip, floppy, netdev, plugdev, sudo, video",
                   "gentoo": "users, wheel", "mariner": "wheel",
                   "photon": "wheel",
